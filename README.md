@@ -6,7 +6,7 @@ This guide explains how to install and configure **Elasticsearch**, **Logstash**
 
 ---
 
-## 📌 **1. Install Java**
+## **1. Install Java**
 
 ```bash
 sudo apt update
@@ -19,7 +19,7 @@ javac --version
 
 ---
 
-## 📌 **2. Add Elasticsearch GPG Key & Repository**
+## **2. Add Elasticsearch GPG Key & Repository**
 
 ```bash
 # Import Elasticsearch GPG key
@@ -33,7 +33,7 @@ sudo apt update
 
 ---
 
-## 📌 **3. Install Elasticsearch**
+## **3. Install Elasticsearch**
 
 ```bash
 sudo apt install elasticsearch -y
@@ -41,7 +41,7 @@ sudo apt install elasticsearch -y
 
 ---
 
-## 📌 **4. Configure Elasticsearch**
+## **4. Configure Elasticsearch**
 
 ```bash
 cd /etc/elasticsearch
@@ -60,7 +60,7 @@ node.name: node-1
 
 ---
 
-## 📌 **5. Set JVM Options (RAM usage)**
+## **5. Set JVM Options (RAM usage)**
 
 ```bash
 sudo vim /etc/elasticsearch/jvm.options
@@ -75,7 +75,7 @@ Set:
 
 ---
 
-## 📌 **6. Start Elasticsearch Service**
+## **6. Start Elasticsearch Service**
 
 ```bash
 sudo systemctl start elasticsearch
@@ -85,7 +85,7 @@ sudo systemctl status elasticsearch
 
 ---
 
-## 📌 **7. Test Elasticsearch**
+## **7. Test Elasticsearch**
 
 ```bash
 curl -X GET "http://<my_server_ip>:9200"
@@ -93,7 +93,7 @@ curl -X GET "http://<my_server_ip>:9200"
 
 ---
 
-## 📌 **8. Install Logstash**
+## **8. Install Logstash**
 
 ```bash
 sudo apt install logstash -y
@@ -101,7 +101,7 @@ sudo apt install logstash -y
 
 ---
 
-## 📌 **9. Start Logstash**
+## **9. Start Logstash**
 
 ```bash
 sudo systemctl start logstash
@@ -110,7 +110,7 @@ sudo systemctl enable logstash
 
 ---
 
-## 📌 **10. Create a Test Logstash Pipeline**
+## **10. Create a Test Logstash Pipeline**
 
 ```bash
 sudo vim /etc/logstash/conf.d/test-pipeline.conf
@@ -153,7 +153,7 @@ sudo systemctl restart logstash
 
 ---
 
-## 📌 **11. Install Kibana**
+## **11. Install Kibana**
 
 ```bash
 sudo apt install kibana -y
@@ -161,7 +161,7 @@ sudo apt install kibana -y
 
 ---
 
-## 📌 **12. Configure Kibana**
+## **12. Configure Kibana**
 
 ```bash
 cd /etc/kibana
@@ -178,7 +178,7 @@ elasticsearch.hosts: ["http://<my_server_ip>:9200"]
 
 ---
 
-## 📌 **13. Start Kibana**
+## **13. Start Kibana**
 
 ```bash
 sudo systemctl restart kibana
@@ -188,7 +188,7 @@ sudo systemctl status kibana
 
 ---
 
-## 📌 **14. Access Kibana Dashboard**
+## **14. Access Kibana Dashboard**
 
 Open in browser:
 
